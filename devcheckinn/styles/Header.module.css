@@ -6,7 +6,7 @@
   font-family: var(--font-title, 'Playfair Display');
   font-size: 0.7rem;
   width: 95vw;
-  height: 7vh;
+  height: 7.5vh;
   margin-bottom: 1rem;
   padding: 0.5rem;
   /* border: 1px solid #000;
@@ -21,7 +21,6 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 0.312rem;
 }
 
 .logo {
