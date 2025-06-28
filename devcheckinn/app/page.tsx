@@ -55,7 +55,7 @@ export default function HomePage() {
 
           <div className={styles.animatedLineGroup}>
 
-              <div className={styles.midAnimatedLine}></div>
+              {/* <div className={styles.midAnimatedLine}></div> */}
               
               <div className={styles.lineTextWrapper1}>
                 <h2 className={styles.h2}>check-inn</h2>
@@ -67,6 +67,7 @@ export default function HomePage() {
                 <div className={styles.midAnimatedLine}></div>
               </div>
 
+
           </div>
               
               <div className={styles.descTextContainer}>
@@ -74,6 +75,7 @@ export default function HomePage() {
                 ensuring an unforgettable experience for every guest.
                 Whether you're here for business or leisure, we make you feel at home with our exceptional service and attention to detail.
               </div>
+
 
         </div>
 
