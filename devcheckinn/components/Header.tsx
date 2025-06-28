@@ -17,13 +17,13 @@ export default function Header() {
                     <Image priority={true} src="/logo/Logo_-_Copy-removebg-preview.png" alt="Check Inn Logo" width={20} height={20} className={styles.logo} />
                 </div>
 
-            <div className={styles.topContainer}>
-                <div className={styles.mobile}><BiSolidPhoneCall className={styles.callIcon} />+2348030555150</div>
-                <a href="https://tinyurl.com/vwdv3pft" target="_blank" rel="noopener noreferrer" className={styles.topLocator}><MdLocationPin className={styles.locationIcon}/>ojodu . Berger</a>
-            </div>
+                <div className={styles.topContainer}>
+                    <div className={styles.mobile}><BiSolidPhoneCall className={styles.callIcon} />+2348030555150</div>
+                    <a href="https://tinyurl.com/vwdv3pft" target="_blank" rel="noopener noreferrer" className={styles.topLocator}><MdLocationPin className={styles.locationIcon}/>ojodu . Berger</a>
+                </div>
 
-            <button className={styles.button}>Book a room</button>
-            <div className={styles.menuIcon}><MenuIcon /></div>
+                <button className={styles.button}>Book a room</button>
+                <div className={styles.menuIcon}><MenuIcon /></div>
 
             </div>
 
