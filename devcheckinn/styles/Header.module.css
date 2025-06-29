@@ -21,16 +21,6 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    animation: dropIn 1s ease-out forwards;
-    opacity: 0;
-    transform: translateY(-2rem);
-}
-
-@keyframes dropIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .logo {
@@ -39,6 +29,9 @@
   object-fit: contain;
   background-color: #000;
   box-shadow: 1px 1px 2px 2px var(--sCol);
+  animation: dropIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-2rem);
 
 }
 
@@ -56,6 +49,9 @@
   border: 1px solid white;
   border-radius: 10px;
   box-shadow: 1px 1px 2px 2px var(--sCol);
+  animation: dropIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-2rem);
 
 }
 
@@ -77,6 +73,9 @@
     font-size: 0.6rem;
     text-transform: uppercase;
     box-shadow: 1px 1px 2px 2px var(--sCol);
+    animation: dropIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-2rem);
 }
 
 .menuIcon {
@@ -97,5 +96,12 @@
 @keyframes slideIn {
   to {
     transform: scaleX(1);
+  }
+}
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
