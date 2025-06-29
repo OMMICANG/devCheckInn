@@ -21,6 +21,16 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    animation: dropIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-2rem);
+}
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .logo {
@@ -39,8 +49,8 @@
   justify-content: space-between;
   font-family: var(--font-title, 'Playfair Display');
   font-size: 0.625rem;
-  width: 60%;
-  padding: 0.1rem;
+  width: 55%;
+  padding: 0.3rem;
   /* margin-top: -1rem; */
   /* margin-bottom: 2rem; */
   border: 1px solid white;
@@ -48,6 +58,8 @@
   box-shadow: 1px 1px 2px 2px var(--sCol);
 
 }
+
+
 
 .locationIcon {
  font-size: 0.5rem;
@@ -58,7 +70,7 @@
 
 .button {
     font-family: 'Playfair Display', serif;
-    padding: 0.15rem;
+    padding: 0.3rem;
     outline: none;
     border: none;
     border-radius: 0.312rem;
