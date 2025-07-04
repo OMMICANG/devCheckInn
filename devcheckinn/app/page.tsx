@@ -79,10 +79,32 @@ export default function HomePage() {
 
         </div>
 
-           <div className={styles.showReelContainer}
+        <div className={styles.showReelContainer}>
+            {backgroundImages.map((image, index) => (
+          <div
+            key={index}
+            className={styles.showReelImage}
+            style={{ display: index === currentImageIndex ? 'block' : 'none' }}
+          >
+            <Image
+              src={image}
+              alt={`Hotel Room ${index + 1}`}
+              fill
+              sizes="(max-width: 768px) 90vw, 90vw"
+              style={{ objectFit: 'cover' }}
+              priority={index === 0}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              quality={75}
+            />
+          </div>
+          ))}
+        </div>
+
+
+           {/* <div className={styles.showReelContainer}
            style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
            >
-           </div>
+           </div> */}
 
     </div>
    );
