@@ -78,7 +78,7 @@ export default function BookRoomPanel({ isOpen, onClose }: BookRoomPanelProps) {
           exit={{ y: '-100%', opacity: 0, height: '37vh' }}
         >
           <div className={styles.panelContent}>
-            <h2 className={styles.title}>Book a Room</h2>
+            <h2 className={styles.title}>Book a Room</h2><hr className={styles.hr}/>
 
             <form onSubmit={handleSubmit} className={styles.form}>
               <input
