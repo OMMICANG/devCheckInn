@@ -111,7 +111,7 @@ export default function BookRoomPanel({ isOpen, onClose }: BookRoomPanelProps) {
                 onChange={handleInputChange}
               />
 
-              <div className={styles.datePickerWrapper}>
+              <div className={styles.dateToggleWrapper}>
                 <input
                   type="text"
                   placeholder="check-in - check-out"
