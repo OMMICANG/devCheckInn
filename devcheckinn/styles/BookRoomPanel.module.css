@@ -8,7 +8,7 @@
   z-index: 1000; 
   width: 100%;
   height: 37vh;
-  max-height: 90vh;
+  max-height: 80vh;
   padding: 0.312rem;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);

@@ -72,7 +72,7 @@ export default function BookRoomPanel({ isOpen, onClose }: BookRoomPanelProps) {
           animate={{
             y: 0,
             opacity: 1,
-            height: calendarVisible ? '70vh' : '37vh',
+            height: calendarVisible ? '80vh' : '37vh',
             transition: { duration: 0.6, ease: 'easeInOut' }
           }}
           exit={{ y: '-100%', opacity: 0, height: '37vh' }}
