@@ -111,9 +111,10 @@ export default function BookRoomPanel({ isOpen, onClose }: BookRoomPanelProps) {
                 onChange={handleInputChange}
               />
 
-              <div className={styles.dateToggleWrapper}>
+              <div className={styles.datePickerWrapper}>
                 <input
                   type="text"
+                  placeholder="check-in - check-out"
                   className={styles.input}
                   readOnly
                   value={`${dateRange[0].startDate.toLocaleDateString()} - ${dateRange[0].endDate.toLocaleDateString()}`}
