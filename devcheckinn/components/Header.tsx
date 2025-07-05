@@ -5,10 +5,15 @@ import Link from 'next/link';
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdLocationPin } from "react-icons/md";
 import MenuIcon from './MenuIcon';
-// import { Button } from '@/components/ui/button';  
+// import { Button } from '@/components/ui/button'; 
+import { useState } from 'react'; 
+import BookRoomPanel from './BookRoomPanel';
 import styles from '../styles/Header.module.css';
 
 export default function Header() {
+    const [isBookPanelOpen, setBookPanelOpen] = useState(false);
+
+
   return (
     <header>
         <div className={styles.headerContainer}>
@@ -43,18 +48,21 @@ export default function Header() {
                     </a>
                 </div>
 
-                <Link href="/rooms">
-                <button className={styles.button}>Book a room</button>
-                </Link>
+                <button className={styles.button} onClick={() => setBookPanelOpen(true)}>Book a room</button>
 
                 <div className={styles.menuIcon}><MenuIcon /></div>
 
             </div>
 
             <div className={styles.topAnimatedLine}></div>
+
         </div>
         
-
+        {/* Book Room Sliding Panel */}
+      <BookRoomPanel
+        isOpen={isBookPanelOpen}
+        onClose={() => setBookPanelOpen(false)}
+      />
 
 
     </header>
