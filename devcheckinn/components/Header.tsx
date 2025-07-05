@@ -21,10 +21,12 @@ export default function Header() {
             <div className={`${styles.headerContent} ${styles.dropIn}`}>
 
                 <div className={styles.logoWrapper}>
+                    <Link href={"/"}>
                     <Image priority={true} 
                     src="/logo/Logo_-_Copy-removebg-preview.png" 
                     alt="Check Inn Logo" width={25} height={25} 
                     className={styles.logo} />
+                    </Link>
                 </div>
 
                 <div className={styles.topContainer}>

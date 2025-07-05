@@ -52,10 +52,14 @@ export default function BookRoomPanel({ isOpen, onClose }: BookRoomPanelProps) {
 
     const message = `Hello, I’d like to book a room:
 
-👤 Name: ${name}
+👤 Name: ${name} 
+
 📞 Phone: ${phone}
+
 🧍 Guests: ${guests}
+
 📅 Check-in: ${checkIn}
+
 📅 Check-out: ${checkOut}`;
 
     const encodedMessage = encodeURIComponent(message);

@@ -1,4 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { TbBrandWhatsappFilled } from "react-icons/tb";
+import { TbBrandInstagramFilled } from "react-icons/tb";
+import { MdAttachEmail } from "react-icons/md";
 import styles from "../styles/MenuIcon.module.css"; // Import CSS module for styling
 
 const MenuIcon: React.FC = () => {
@@ -6,7 +11,7 @@ const MenuIcon: React.FC = () => {
   const [focusIndex, setFocusIndex] = useState(0); // Tracks the focused item
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const items = [ " ", "onboard", "Principles", "RoadMap", "Notifications", "Help", " "]; // Example sidebar items
+  const items = [ " ", "Interiors", "Amenities", "Rooms", "Restaurant", "Bar", "Login", "Sign Up", " ", " ",]; // Example sidebar items
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -73,6 +78,26 @@ const MenuIcon: React.FC = () => {
               {item}
             </div>
           ))}
+
+            <div className={styles.logoContainer}>
+                <Image
+                src="/logo/Logo_-_Copy-removebg-preview.png" 
+                alt="Check-Inn Logo"
+                width={70}
+                height={70}
+                className={styles.logo}
+                priority
+                />
+            </div>
+
+            <div className={styles.bottomSocialIcons}>
+                <a href="https://wa.me/2348030555150" target="_blank" rel="noopener noreferrer"><TbBrandWhatsappFilled className={styles.whatsappIcon} /></a>
+
+                <a href="https://www.instagram.com/checkinn.hotel/" target="_blank" rel="noopener noreferrer"><TbBrandInstagramFilled className={styles.instaIcon} /></a>
+
+                <a href="mailto:support@checkinnhotelsng.com?subject=Booking%20Enquiry&body=Hi%20Check-Inn%2C%0AI'd%20love%20to%20make%20a%20reservation..." target="_blank" rel="noopener noreferrer"><MdAttachEmail /></a>
+
+            </div>
 
         </div>
       </div>
