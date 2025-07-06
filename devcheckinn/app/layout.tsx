@@ -4,6 +4,7 @@ import '../styles/layout.css';
 import { Gravitas_One, Playfair_Display, Lobster, Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import IsMobile from '@/components/IsMobile';
 
 
 export const metadata: Metadata = {
@@ -44,11 +45,15 @@ export default function RootLayout({ children }: {
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${lobster.variable} ${inter.variable}`}>
-         <div className="contentBox">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+
+      <IsMobile>
+
+        <div className="contentBox">
+          <Header />
+            <main>{children}</main>
+          <Footer />
         </div>
+      </IsMobile>
       </body>
     </html>
   );

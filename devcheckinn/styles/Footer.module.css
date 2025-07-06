@@ -17,11 +17,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
     font-weight: 900;
     width: 100%;
-    height: 40vh;
-    /* padding: 0.312rem; */
+    height: 50vh;
+    padding: 0.625rem;
     border: 1px ridge #000;
     border-radius: 0.15rem;
     box-shadow: 1px 1px 2px 2px var(--sCol);
@@ -29,7 +30,7 @@
 }
 .footerInfoBox>div {
     justify-content: space-evenly;
-    width: 30%;
+    width: 40%;
     height: 20vh;
     margin: 0.312rem;
     padding: 0.75rem 0.312rem;
@@ -40,9 +41,9 @@
 }
 
 .footerInfoBox>span {
-    width: 30%;
-    height: 15vh;
-    margin: 0.312rem;
+    width: 40%;
+    height: 20vh;
+    /* margin: 0.312rem; */
     padding: 1rem;
     box-shadow: 1px 1px 2px 2px var(--sCol);
     border: 1px solid #000;
@@ -188,4 +189,23 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes breathFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animateBreath {
+  animation: breathFadeIn 1.5s ease-out forwards;
 }
