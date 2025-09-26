@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { BiSolidPhoneCall } from "react-icons/bi";
+// import { BiSolidPhoneCall } from "react-icons/bi";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 import { TbBrandInstagramFilled } from "react-icons/tb";
 import { BiLogoTelegram } from "react-icons/bi";
@@ -12,7 +12,19 @@ const MenuIcon: React.FC = () => {
   const [focusIndex, setFocusIndex] = useState(0); // Tracks the focused item
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const items = [ " ", "Interiors", "Amenities", "Rooms", " Team", "Restaurant", "Bar", "Login", "Sign Up", " ", " ",]; // Example sidebar items
+  const items = [
+     " ",
+     "Interiors",
+     "Blog",
+     "Rooms",
+     "Team",
+     "Restaurant", 
+     "Bar", 
+     "Login", 
+     "Sign Up", 
+     " ",
+    
+    ]; // Example sidebar items
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -22,7 +34,7 @@ const MenuIcon: React.FC = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    const center = container.offsetHeight / 1;
+    const center = container.offsetHeight / 0.7;
     const items = Array.from(container.children) as HTMLElement[];
     const closestIndex = items.reduce((closest, item, index) => {
       const itemCenter =

@@ -8,7 +8,7 @@ import IsMobile from '@/components/IsMobile';
 
 
 export const metadata: Metadata = {
-  title: "Check-Inn Hotels, Restaurant & Bar",
+  title: "Check-Inn 247 Hotels, Restaurant & Bar",
   description: "Your perfect getaway in Ojodu, Berger. Hotel, Restaurant, Bar. We Make You Feel At Home",
     icons: {
     icon: "/logo/Logo_-_Copy-removebg-preview.png", // ✅ this is the correct placement for Site Icon
@@ -44,6 +44,16 @@ export default function RootLayout({ children }: {
 
   return (
     <html lang="en">
+
+      <head>
+
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/apple-icon-180.png"/>
+        {/* <meta name="apple-mobile-web-app-capable" content="yes"/> */}
+        <meta name="mobile-web-app-capable" content="yes"></meta>
+       <link rel="apple-touch-startup-image" href="/apple-icon-180.png" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/>
+       
+      </head>
       <body className={`${playfair.variable} ${lobster.variable} ${inter.variable}`}>
 
       <IsMobile>
