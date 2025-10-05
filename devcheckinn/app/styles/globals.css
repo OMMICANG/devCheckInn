@@ -1,0 +1,220 @@
+/* ================================
+   Global Styles for CheckInn, Hotel
+   ================================ */
+
+/* Import Brand Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;600;700&family=Gravitas+One:wght@400&display=swap'); */
+
+/* @import 'remixicon/fonts/remixicon.css'; */
+
+
+/* ==================================================
+   Base Theme Variables (Light is Default)
+   ================================================== */
+:root {
+  /* Colors */
+  --color-primary: #DAA520;   /* Red (Speed) */
+  --color-secondary: #DEDCFF; /* Blue (Reliability) */
+  --color-background: rgba(255, 255, 255, 0.85); /* Default Light Background */
+  --color-text: #000000;       /* Default Light Text */
+  --color-accent: #DAA520;     /* Red Accent */
+  --sCol: #0B0000;
+
+
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-title: 'Lobster', ;
+  --font-body: 'Playfair', sans-serif;
+  /* --font-body: 'Merriweather', serif; */
+  --font-accent: 'Roboto Slab', serif;
+  --font-wildCard: 'Gravitas One', serif;
+
+  /* Font Sizes (Adjustable for Accessibility) */
+  --font-size-xl: 2rem;     /* Headings */
+  --font-size-lg: 1.5rem;   /* Subheadings */
+  --font-size-md: 1rem;     /* Body */
+  --font-size-sm: 0.75rem; /* Small Text */
+}
+
+/* ==================================================
+   Dark Theme Overrides (activated via data-theme="dark")
+   ================================================== */
+/* Light theme */
+html.light {
+  --color-background: rgba(255, 255, 255, 0.85);
+  --color-text: #000000;
+}
+
+/* Dark theme */
+html.dark {
+  --color-background: #000000;
+  --color-text: rgb(210, 210, 210);
+}
+
+
+   /* html[data-theme="dark"] {
+  --color-background: #0a0a0a;
+  --color-text: #FFFFFF;
+} */
+
+/* ==================================================
+   Global Resets & Base Styles
+   ================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html, body {
+  height: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+/* ==================================================
+   Typography Rules
+   ================================================== */
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+} */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* p, span, li {
+  font-family: var(--font-body);
+  color: var(--color-text);
+} */
+
+/* .accentFont {
+  font-family: var(--font-accent);
+  color: var(--color-accent);
+  font-weight: 600;
+} */
+
+/* ==================================================
+   Utility Classes
+   ================================================== */
+.text-light {
+  color: var(--color-text);
+}
+.text-dark {
+  color: var(--color-text);
+}
+
+.bg-light {
+  background-color: var(--color-background);
+}
+.bg-dark {
+  background-color: var(--color-background);
+}
+
+/* ==================================================
+   Buttons
+   ================================================== */
+/* .btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+} */
+/* .btn-primary:hover {
+  opacity: 0.9;
+} */
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth theme transitions */
+html, body, * {
+  transition:
+    background-color 1s ease-in-out,
+    color 1s ease-in-out,
+    border-color 1s ease-in-out,
+    fill 1s ease-in-out,
+    stroke 1s ease-in-out;
+}
+
+/* html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-title: 'Lobster', ;
+  --font-body: 'Playfair', sans-serif;
+    --sCol: #0B0000;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */

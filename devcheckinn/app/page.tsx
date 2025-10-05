@@ -2,14 +2,18 @@
 
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Header from '@/app/components/Header';
 import Image from 'next/image';
+import Testimonials from '@/app/components/Testimonials';
+import Footer from './components/Footer';
+
 // import { MdLocationPin } from "react-icons/md";
 // import { BiSolidPhoneCall } from "react-icons/bi";
 // import { TbBrandWhatsappFilled } from "react-icons/tb";
 // import { TbBrandInstagramFilled } from "react-icons/tb";
 // import { MdAttachEmail } from "react-icons/md";
 // import confetti from 'canvas-confetti';
-import styles from '../styles/Homepage.module.css';
+import styles from './styles/Homepage.module.css';
 
 const backgroundImages = [
   '/backgrounds/1.webp',
@@ -43,19 +47,19 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div >
-       <Head>
+    <div className={styles.contentBox} >
+
+      <Head>
          <title>Check Inn - Coming Soon</title>
          <meta name="viewport" content="width=device-width, initial-scale=1" />
          <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Lobster&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet" />
-       </Head>
-          
+      </Head>
+
+      <Header />
 
         <div className={styles.midSectionWrapper}>
 
           <div className={styles.animatedLineGroup}>
-
-              {/* <div className={styles.midAnimatedLine}></div> */}
               
               <div className={styles.lineTextWrapper1}>
                 <h2 className={styles.h2}>check-inn</h2>
@@ -66,7 +70,6 @@ export default function HomePage() {
                 <h2 className={styles.h2}>hotel in ojodu</h2>
                 <div className={styles.midAnimatedLine}></div>
               </div>
-
 
           </div>
               
@@ -81,31 +84,29 @@ export default function HomePage() {
 
         <div className={styles.showReelContainer}>
             {backgroundImages.map((image, index) => (
-          <div
-            key={index}
-            className={styles.showReelImage}
-            style={{ display: index === currentImageIndex ? 'block' : 'none' }}
-          >
-            <Image
-              src={image}
-              alt={`Hotel Room ${index + 1}`}
-              fill
-              sizes="(max-width: 768px) 90vw, 90vw"
-              style={{ objectFit: 'cover' }}
-              priority={index === 0}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              quality={75}
-            />
-          </div>
+              <div
+                key={index}
+                className={styles.showReelImage}
+                style={{ display: index === currentImageIndex ? 'block' : 'none' }}
+              >
+                <Image
+                  src={image}
+                  alt={`Hotel Room ${index + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 90vw, 90vw"
+                  style={{ objectFit: 'cover' }}
+                  priority={index === 0}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  quality={75}
+                />
+              </div>
           ))}
         </div>
 
-
-           {/* <div className={styles.showReelContainer}
-           style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
-           >
-           </div> */}
+        <Testimonials />
+        <Footer />
 
     </div>
+    
    );
  };

@@ -1,3 +1,33 @@
+
+
+.contentBox {
+  /* display: flex; */
+  /* flex-direction: column; */
+  position: fixed;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 95vw;
+  width: 95vw;
+  height: 90vh;
+  max-height: 90vh;
+  margin-top: 7vh;
+  margin-bottom: 10vh;
+  padding: 0;
+  /* background: rgba(255, 255, 255, 0.85); */
+  background: var(--color-background);
+  border: 1px solid var(--color-background);
+  border-radius: 0.75rem;
+  color: var(--color-text);
+  /* color: var(--color-text); */
+  text-align: center;
+  box-shadow: 1px 1px 2px 2px var(--background);
+  /* box-shadow: 1px 1px 0.5px 0.5px var(--color-text); */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+}
+
 .midSectionWrapper {
   display: flex;
   flex-direction: column;
@@ -5,13 +35,13 @@
   align-items: flex-start;
   justify-content: space-evenly;
   width: 90vw;
+  max-width: 90vw;
   height: 30vh;
-  margin-top: -2rem;
+  margin-top: 5vh;
   margin-bottom: 1.5rem;
+  left: -1.5rem;
   padding: 0;
-  /* border: 1px solid #000; */
   border-radius: 0.625rem;
-  /* box-shadow: 1px 1px 2px 2px var(--sCol); */
 }
 
 .animatedLineGroup {
@@ -64,7 +94,7 @@
 .descTextContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   font-family: 'Playfair Display', serif;
   font-size: 0.5rem;
@@ -72,7 +102,7 @@
   width: 90%;
   height: 50%;
   padding: 0.15rem;
-  border: 1px solid #000;
+  border: 1px solid var(--color-text);
   border-radius: 0.625rem;
   box-shadow: 1px 1px 2px 2px var(--sCol);
   text-transform: uppercase;
@@ -85,16 +115,18 @@
 
 .showReelContainer {
   display: flex;
+  align-self: flex-start;
   position: relative;
   width: 90vw;
   height: 50vh;
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   /* border: 1px solid #000; */
   border-radius: 0.625rem;
   box-shadow: 1px 1px 2px 2px var(--sCol);
   overflow: hidden;
   justify-content: center;
+  left: -1.5rem;
   background: center/cover no-repeat;
   /* font-family: "Gravitas one", serif; */
   /* transition: background-image 1.5s ease-in-out; */
@@ -103,20 +135,23 @@
 }
 
 .showReelImage {
-  position: absolute;
+  display: flex;
   width: 100%;
   height: 100%;
   /* transition: opacity 1.5s ease-in-out; */
   animation: showReelAnimation 2s ease-in-out;
 }
 
-.showReelContent {
+/* .showReelContent {
   display: flex;
   position: relative;
   width: 100%;
   height: 100%;
 
+} */
 
+.testimonial {
+  position: relative;
 }
 
 

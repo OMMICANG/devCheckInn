@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import '../styles/globals.css';
-import '../styles/layout.css';
+import './styles/globals.css';
+import './styles/layout.css';
+// import { PropsWithChildren } from 'react';
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Gravitas_One, Playfair_Display, Lobster, Inter } from 'next/font/google';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import IsMobile from '@/components/IsMobile';
+// import Header from './components/Header';
+import IsMobile from './components/IsMobile';
 
 
 export const metadata: Metadata = {
@@ -39,8 +40,8 @@ const inter = Inter({
 });
 
 
-export default function RootLayout({ children }: { 
-  children: React.ReactNode }) {
+export default function RootLayout({ children }: 
+  { children: React.ReactNode }) {
 
   return (
     <html lang="en">
@@ -52,17 +53,18 @@ export default function RootLayout({ children }: {
         {/* <meta name="apple-mobile-web-app-capable" content="yes"/> */}
         <meta name="mobile-web-app-capable" content="yes"></meta>
        <link rel="apple-touch-startup-image" href="/apple-icon-180.png" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/>
-       
+
       </head>
       <body className={`${playfair.variable} ${lobster.variable} ${inter.variable}`}>
 
       <IsMobile>
-
-        <div className="contentBox">
-          <Header />
-            <main>{children}</main>
-          <Footer />
-        </div>
+          <NextThemesProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+          >
+            {children}
+          </NextThemesProvider>
       </IsMobile>
       </body>
     </html>

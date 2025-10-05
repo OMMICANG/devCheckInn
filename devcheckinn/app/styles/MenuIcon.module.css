@@ -9,7 +9,7 @@
 
 .menu span {
 
-    background: var(--sCol);
+    background: var(--color-background);
     width: 100%;
     height: 2px;
     border-radius: 5px;
@@ -63,8 +63,8 @@
     top: 0;
     right: -300px; /* Initially hidden */
     width: 12.813rem;
-    height: 85vh;
-    max-height: 85vh;
+    height: 90vh;
+    max-height: 90vh;
     font-size: 1rem;
     margin-top: 7vh;
     margin-right: -0.312rem;
@@ -78,6 +78,27 @@
   
   .sidebarOpen {
     right: 0; /* Visible when open */
+
+  }
+
+    .topHeaderContainer{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    top: 0;
+    justify-content: space-between;
+    font-family: var(--font-body, 'Playfair Display');
+    font-size: 0.625rem;
+    width: 100%;
+    height: 9vh;
+    padding: 0.5rem;
+    /* background: var(--color-text); */
+    background: linear-gradient(to left, var(--color-primary), var(--color-background));
+    color: var(--color-background);
+    border-bottom: 1px solid var(--color-background);
+    border-radius: 0.625rem 0.625rem 0 0  ;
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
 
   }
 
@@ -155,7 +176,7 @@
   justify-content: space-around;
   font-family: var(--font-title, 'Playfair Display');
   font-size: 1rem;
-  width: 70%;
+  width: 80%;
   padding: 0.2rem;
   margin-top: 1rem;
   /* margin-bottom: 2rem; */

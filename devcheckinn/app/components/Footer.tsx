@@ -134,7 +134,7 @@ export default function Footer() {
           visible ? styles.animateBreath : ''
         }`}
       >
-        &copy; {new Date().getFullYear()} Check-Inn Hotels. All rights reserved.
+        &copy; {new Date().getFullYear()} Check-Inn247 Hotels. All rights reserved.
       </div>
     </footer>
   );

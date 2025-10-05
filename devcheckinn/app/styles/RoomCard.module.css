@@ -1,0 +1,181 @@
+.roomCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem auto;
+  margin-right: 2rem;
+  border: 1px solid var(--color-text);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 0.5px 0.5px var(--sCol);
+  overflow: hidden;
+  background: var(--color-background);
+  font-family: "Playfair Display", serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roomCard:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.roomCard:first-child {
+  margin-left: 1rem;
+}
+/* Header */
+.roomHeader {
+  padding: 0.5rem 3rem;
+  background:linear-gradient(to left, var(--color-primary), var(--color-background));
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.roomHeader h2 {
+  font-size: 1rem;
+  font-weight: 800;
+  padding-bottom: 0.1rem;
+  margin: 0;
+  color: var(--color-text);
+  border: 2px ridge var(--color-text);
+  box-shadow: inset -2px -2px -2px 5px var(--color-text);
+  border-radius: 0.312rem;
+}
+
+/* Carousel */
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  transition: height 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px ridge var(--color-text);
+  box-shadow: inset -2px -2px -2px 5px var(--sCol);
+
+}
+
+.roomImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Camera Icon */
+.cameraIcon {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.312rem;
+  background: #fafafa;
+  border-top: 1px solid #ddd;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  /* gap: 0.15rem; */
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.15rem;
+}
+
+.featureName {
+  color: #333;
+}
+
+.featureValue {
+  color: green;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background: linear-gradient(to left, var(--color-primary), var(--color-background));
+  border-top: 1px solid #ddd;
+}
+
+.roomPrice {
+  font-size: 0.8rem;
+  display: flex;
+  font-family: var(--font-body, 'Playfair Display');
+  font-weight: 800;
+  color: var(--sCol);
+  margin: 0;
+  padding: 0.15rem 0.312rem;
+  background: #fafafa;
+  text-align: center;
+  border: 2px ridge var(--color-text);
+  box-shadow: inset -2px -2px -2px 5px var(--color-text);
+  border-radius: 0.312rem;
+}
+
+.roomCard:last-child {
+  margin-right: 5rem;
+}
+
+/* Modal overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 25;
+}
+
+/* Modal content box */
+.modalContent {
+  position: relative;
+  background: var(--color-background);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  max-width: 90%;
+  max-height: 85%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Close button */
+.closeButton {
+  position: fixed;
+  top: 25vh;
+  right: 15px;
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  z-index: 70;
+}
+
+/* Enlarged modal image */
+.modalImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}

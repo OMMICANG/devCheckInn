@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation"; // For navigation to Selected Item
 import Image from "next/image";
 // import { BiSolidPhoneCall } from "react-icons/bi";
+import ThemeToggle from './ThemeToggle';
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 import { TbBrandInstagramFilled } from "react-icons/tb";
 import { BiLogoTelegram } from "react-icons/bi";
@@ -11,17 +13,15 @@ const MenuIcon: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [focusIndex, setFocusIndex] = useState(0); // Tracks the focused item
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const router = useRouter(); // Initialize router
 
   const items = [
      " ",
-     "Interiors",
-     "Blog",
      "Rooms",
-     "Team",
+     "About",
+     "Blog",
      "Restaurant", 
      "Bar", 
-     "Login", 
-     "Sign Up", 
      " ",
     
     ]; // Example sidebar items
@@ -45,6 +45,31 @@ const MenuIcon: React.FC = () => {
 
     setFocusIndex(closestIndex.index);
   };
+
+  //     // Handle item click and navigate to the selected page
+  
+    const handleItemClick = (item: string) => {
+    switch (item) {
+      case "Rooms":
+        router.push("/rooms");
+        break;
+      case "About":
+        router.push("/about"); // Navigate to the desired route
+        break;
+      case "Blog":
+        router.push("blog");
+        break;
+      case "Restaurant":
+        router.push("restaurant");
+        break;
+      case "Bar":
+        router.push("bar");
+        break;
+      default:
+        break;
+    }
+  };
+
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -87,21 +112,27 @@ const MenuIcon: React.FC = () => {
                 transform: `scale(${index === focusIndex ? 1.2 : 1})`,
                 opacity: index === focusIndex ? 1 : 0.5,
               }}
+
+              onClick={() => handleItemClick(item)}
             >
               {item}
             </div>
           ))}
 
-            <div className={styles.logoContainer}>
+          <div className={styles.topHeaderContainer}>
+
+            <div>
                 <Image
                 src="/logo/Logo_-_Copy-removebg-preview.png" 
                 alt="Check-Inn Logo"
-                width={70}
-                height={70}
+                width={35}
+                height={35}
                 className={styles.logo}
                 priority
                 />
             </div>
+          </div>
+          
 
             <div className={styles.bottomSocialIcons}>
                 <a href="https://wa.me/2348030555150" target="_blank" rel="noopener noreferrer"><TbBrandWhatsappFilled className={styles.whatsappIcon} /></a>
@@ -111,11 +142,13 @@ const MenuIcon: React.FC = () => {
                 <a href="mhttps://t.me/checkinnhotelsngailto:support@checkinnhotelsng.com?subject=Booking%20Enquiry&body=Hi%20Check-Inn%2C%0AI'd%20love%20to%20make%20a%20reservation..." target="_blank" rel="noopener noreferrer"><BiLogoTelegram className={styles.telegramIcon} /></a>
 
                 <a href="mailto:support@checkinnhotelsng.com?subject=Booking%20Enquiry&body=Hi%20Check-Inn%2C%0AI'd%20love%20to%20make%20a%20reservation..." target="_blank" rel="noopener noreferrer"><MdAttachEmail /></a>
+                <span className={styles.themeProvider}><ThemeToggle/></span>
+
 
             </div>
+          </div>
 
         </div>
-      </div>
     </>
   );
 };
