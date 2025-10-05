@@ -1,4 +1,4 @@
-.roomCard {
+.parentCard {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -14,26 +14,29 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.roomCard:active {
+.parentCard:active {
   transform: scale(0.98);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.roomCard:first-child {
+.parentCard:first-child {
   margin-left: 1rem;
 }
 /* Header */
-.roomHeader {
+.cardHeader {
+  align-self: center;
   padding: 0.5rem 3rem;
   background:linear-gradient(to left, var(--color-primary), var(--color-background));
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
-.roomHeader h2 {
+.cardHeader h2 {
   font-size: 1rem;
   font-weight: 800;
-  padding-bottom: 0.1rem;
+  padding: 0.1rem;
+  width: 40vw;
+  max-width: 40vw;
   margin: 0;
   color: var(--color-text);
   border: 2px ridge var(--color-text);
@@ -54,7 +57,7 @@
 
 }
 
-.roomImage {
+.image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -73,7 +76,7 @@
   align-self: center;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 3;
 }
 
 /* Features */
@@ -91,19 +94,14 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  /* gap: 0.15rem; */
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-family: var(--font-wildCard, 'Lobster');
+  font-size: 0.5rem;
+  font-weight: 500;
   margin-right: 0.15rem;
+  color: var(--sCol);
+  text-transform: uppercase;
 }
 
-.featureName {
-  color: #333;
-}
-
-.featureValue {
-  color: green;
-}
 
 .priceContainer {
   display: flex;
@@ -114,7 +112,7 @@
   border-top: 1px solid #ddd;
 }
 
-.roomPrice {
+.price {
   font-size: 0.8rem;
   display: flex;
   font-family: var(--font-body, 'Playfair Display');
@@ -129,7 +127,7 @@
   border-radius: 0.312rem;
 }
 
-.roomCard:last-child {
+.parentCard:last-child {
   margin-right: 5rem;
 }
 

@@ -12,24 +12,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import styles from "../styles/RoomCard.module.css";
+import styles from "../styles/Card.module.css";
 
-interface RoomCardProps {
-  number: string;
+interface CardProps {
+  item: string;
   images: string[];
-  features: { [key: string]: string };
+  features:  string;
   price: number;
 }
 
-const RoomCard: React.FC<RoomCardProps> = ({ number, images, features, price, }) => {
+const Card: React.FC<CardProps> = ({ item, images, features, price, }) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className={styles.roomCard}>
+    <div className={styles.parentCard}>
       {/* Room Header */}
-      <div className={styles.roomHeader}>
-        <h2>Room {number}</h2>
+      <div className={styles.cardHeader}>
+        <h2>{item}</h2>
       </div>
 
       {/* Image Carousel */}
@@ -51,10 +51,10 @@ const RoomCard: React.FC<RoomCardProps> = ({ number, images, features, price, })
             <SwiperSlide key={idx}>
               <Image
                 src={img}
-                alt={`Room ${number} image ${idx + 1}`}
+                alt={`item ${item} image ${idx + 1}`}
                 width={400}
                 height={400}
-                className={styles.roomImage}
+                className={styles.image}
               />
             </SwiperSlide>
           ))}
@@ -70,16 +70,11 @@ const RoomCard: React.FC<RoomCardProps> = ({ number, images, features, price, })
 
       {/* Features Footer */}
       <div className={styles.features}>
-        {Object.entries(features).map(([key, value]) => (
-          <div key={key} className={styles.featureItem}>
-            <span className={styles.featureName}>{key}:</span>
-            <span className={styles.featureValue}>{value}</span>
-          </div>
-        ))}
+          <span className={styles.featureItem}> {features}</span>
       </div>
       <div className={styles.priceContainer}>
 
-      <span className={styles.roomPrice}>{`₦ ${price}`}</span>
+      <span className={styles.price}>{`₦ ${price}`}</span>
 
       </div>
 
@@ -111,7 +106,7 @@ const RoomCard: React.FC<RoomCardProps> = ({ number, images, features, price, })
                 <SwiperSlide key={idx}>
                   <Image
                     src={img}
-                    alt={`Room ${number} image ${idx + 1}`}
+                    alt={`item ${item} image ${idx + 1}`}
                     width={800}
                     height={500}
                     className={styles.modalImage}
@@ -130,4 +125,4 @@ const RoomCard: React.FC<RoomCardProps> = ({ number, images, features, price, })
   );
 };
 
-export default RoomCard;
+export default Card;

@@ -33,7 +33,10 @@ export default function Header() {
 
                     <div className={styles.mobile}>
                     <BiSolidPhoneCall className={styles.callIcon} />
-                    <span>+2348030555150</span> 
+                    <a href='https://bit.ly/46D3Ho0'
+                    >
+                      +2348030555150
+                    </a> 
                     </div>
 
                     <a 
