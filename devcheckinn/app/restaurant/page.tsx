@@ -4,7 +4,7 @@
 import React from "react";
 import Header from "@/app/components/Header";
 import Card from "@/app/components/Card";
-import styles from './Restaurant.module.css';
+import styles from "../styles/Restaurant.module.css";
 
 export default function RoomsPage() {
   // Dummy data for preview
