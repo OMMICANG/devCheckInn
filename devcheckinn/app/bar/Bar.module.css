@@ -115,6 +115,10 @@
   max-width: 400px; /* optional cap for larger screens */
 }
 
+.cardContainer:last-child {
+  margin-bottom: 0.15rem; /* add some space after the last card */
+}
+
 
 
 

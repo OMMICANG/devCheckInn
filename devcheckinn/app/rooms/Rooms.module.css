@@ -69,17 +69,6 @@
   animation-delay: 1.7s;
   text-transform: uppercase;
 }
-/* .roomsContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: auto;
-  justify-content: space-evenly;
-  padding: 1rem 0;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-} */
 
 .roomsContainer {
   display: flex;
@@ -115,6 +104,10 @@
   max-width: 400px; /* optional cap for larger screens */
 }
 
+.roomsContainer:last-child {
+  margin-bottom: 0.15rem; /* add some space after the last card */
+}
+
 
 
 
@@ -126,5 +119,33 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+/* ********************************************************************************************** */
+
+/* tablet */
+@media (min-width: 768px) {
+  .contentBox {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;              /* let page expand */
+    padding: 1rem 2rem;
+    /* margin-top: 5vh; */
+  }
+
+  .roomsContainer > * {
+    width: 40vw; /* Each card takes ~85% of viewport width */
+    max-width: 350px; /* optional cap for larger screens */
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .contentBox {
+    width: 100vw;
+    max-width: 1000px;
+
   }
 }

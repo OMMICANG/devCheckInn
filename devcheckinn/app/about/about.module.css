@@ -1,0 +1,378 @@
+.contentBox {
+  /* display: flex; */
+  /* flex-direction: column; */
+  position: fixed;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 95vw;
+  width: 95vw;
+  height: 90vh;
+  max-height: 90vh;
+  margin-top: 7vh;
+  margin-bottom: 10vh;
+  padding: 0;
+  /* background: rgba(255, 255, 255, 0.85); */
+  background: var(--color-background);
+  border: 1px solid var(--color-background);
+  border-radius: 0.75rem;
+  color: var(--color-text);
+  /* color: var(--color-text); */
+  text-align: center;
+  box-shadow: 1px 1px 2px 2px var(--background);
+  /* box-shadow: 1px 1px 0.5px 0.5px var(--color-text); */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+}
+
+.aboutHeader {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100vw ;
+    height: 7vh;
+    margin-top: 14vh;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+    border: 1px ridge var(--color-text);
+    background: linear-gradient(to left, var(--color-primary), var(--color-background));
+    box-shadow: 1px 1px 1px 1px var(--color-text);
+    animation: slideIn 1.5s ease-out forwards;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.aboutHeader1 {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100vw ;
+    height: 7vh;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+    border: 1px ridge var(--color-text);
+    background: linear-gradient(to left, var(--color-primary), var(--color-background));
+    box-shadow: 1px 1px 1px 1px var(--color-text);
+    animation: slideIn 1.5s ease-out forwards;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.aboutHeader>span {
+    font-family: var(--font-wildCard), serif;
+    font-weight: 900;
+    padding: 0.312rem;
+    text-transform: uppercase;
+}
+
+.aboutHeader1>span {
+    font-family: var(--font-wildCard), serif;
+    font-weight: 900;
+    padding: 0.312rem;
+    text-transform: uppercase;
+}
+
+.aboutTextBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    /* margin-bottom: 40vh; */
+    padding: 2rem 0;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+}
+
+
+.aboutBoxWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+} 
+
+
+.aboutBoxWrapper>div {
+    width: 45%;
+    height: 15vh;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+}
+
+.mission {
+    animation: dropIn 1.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-2.5rem);
+}
+
+.vision{
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.coreValues {
+    width: 50%;
+    height: 15vh;
+    margin: 0 auto;
+    padding: 0.312rem;
+    left: 0;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: linear-gradient(to left, var(--color-secondary), var(--color-background));
+    color: var(--color-background);
+    font-family: var(--font-body), serif;
+    font-weight: 900;
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+    opacity: 0;
+    animation: fadeSlideUp 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.aboutBoxWrapper2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.aboutBoxWrapper2>div {
+    width: 45%;
+    height: 15vh;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+}
+
+.culture {
+    animation: dropIn 1.5s ease-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    transform: translateY(-2.5rem);
+}
+
+.ethics{
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+
+}
+
+.trackRecordWrapperBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    padding: 2rem 0;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+}
+
+.trackRecordWrapperBox>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 10vh;
+    margin: 0 auto;
+    padding: 0.312rem;
+    left: 0;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body), serif;
+    font-weight: 900;
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+
+.trackRecordWrapperBox>.record2{
+    animation-delay: 1.5s;
+}
+
+.trackRecordWrapperBox>.record3{
+    animation-delay: 2s;
+}
+
+.trackRecordWrapperBox>.record4{
+    animation-delay: 2.5s;
+}
+
+.recordText{
+  font-family: var(--font-heading), serif;
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.animatedLine {
+  display: flex;
+  height: 2px;
+  width: 30%;
+  max-width: 30%;
+  background: linear-gradient(to left, var(--color-primary), var(--color-text));
+  justify-content: left;
+  animation: slideIn 5s ease-out forwards;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.careersBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+    opacity: 0;
+    animation: fadeSlideUp 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.careersBox>div{
+    width: 90%;
+    height: auto;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    box-shadow: 1px 1px 0.5px 0.5px var(--sCol);
+    margin: 0.5rem;
+}
+
+.headerBlock {
+    align-items: flex-start;
+    text-align: left;
+    font-family: var(--font-heading), serif;
+    font-size: 0.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-text);
+    padding: 0.625rem;
+}
+
+.careers{
+  font-weight: 500;
+  padding: 0.625rem;
+  text-align: left;
+  color: var(--color-text);
+  
+}
+
+.careers>ul>li{
+    font-size: 0.625rem;
+    font-weight: 500;
+    font-family: var(--font-title), serif;
+    list-style-type: disc;
+    margin-left: 1.25rem;
+    text-transform: uppercase;
+}
+
+.apply {
+    background: linear-gradient(to left, var(--color-background), var(--color-text));
+    color: var(--color-secondary);
+    border: 1px solid var(--color-text);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-family: var(--font-accent), serif;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+    margin-top: 0.5rem;
+    box-shadow: 1px 1px 0.5px 0.5px var(--sCol);
+    text-transform: uppercase;
+}
+
+.footerCopyrightBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.625rem;
+    font-family: var(--font-body), serif;
+    font-weight: 500;
+    width: 100vw;
+    height: 10vh;
+    margin: 0;
+    padding: 0.312rem;
+    color: var(--color-text);
+    text-align: center;
+    border: 1px ridge var(--color-text);
+    border-radius: 0.15rem;
+    background: linear-gradient(to left, var(--color-primary), var(--color-background));
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+    text-transform: uppercase;
+
+}
+
+
+@keyframes slideIn {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

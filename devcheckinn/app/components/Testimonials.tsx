@@ -11,36 +11,38 @@ import styles from '../styles/Testimonials.module.css';
 const testimonials = [
   {
     img: '/img/avatar-1.png',
-    name: 'Jane Wilcox',
-    rating: 5,
-    role: '(Doctor)',
-    text: `As a pharmacy, timely medication deliveries are essential 
-    for our patients. YourTime Delivery has never let us down.`,
+    name: 'Okoye Peter',
+    rating: 4,
+    role: '(Guest)',
+    text: `Nice place , nice location,
+    beautiful customer service though room is not so spacious
+    but quite comfy`,
   },
   {
     img: '/img/avatar-2.png',
-    name: 'Jan Masters',
-    role: '(Rtd Soldier)',
-    rating: 5,
-    text: `YourTime Delivery has been a lifesaver for our clinic! 
-    Their prompt service and attention to detail ensure we always 
-    receive critical medical supplies on time`,
+    name: 'Israel Olofa',
+    role: '(Guest)',
+    rating: 4,
+    text: `Their AC in the rooms can send you Antarctica 😅.
+    Courteous staff. Neat rooms.
+    Prices from N23,000 up`,
   },
   {
     img: '/img/avatar-3.png',
-    name: 'Dan Ellis',
-    role: '(Pharmacist)',
-    rating: 5,
-    text: `I trust YourTime Delivery for all my business shipments. 
-    Their professionalism and reliability give me peace of mind.`,
+    name: 'Anuoluwapo',
+    role: '(Guest)',
+    rating: 4,
+    text: `Their food is very nice but a bit on the high side.
+    Excellent Service. I Enjoyed Their Service.`,
   },
   {
     img: '/img/avatar-4.png',
     name: 'OMMICANG',
     role: '(Business Owner)',
     rating: 5,
-    text: `The company offers many easy-to-use services, 
-    with hard work and round-the-clock support on all Deliveries.`,
+    text: `They've Made Some Real Positive Improvements 
+    From Last Time I Visited.
+    Their Service Now Is Topnotch.`,
   },
 ];
 

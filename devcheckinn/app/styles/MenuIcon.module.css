@@ -199,3 +199,23 @@
 .telegramIcon{
     color: #24A1DE;
 }
+
+/* ****************************************************************************** */
+
+@media (min-width: 768px) {
+.sidebar {
+
+    width: 25rem;
+    right: -400px;
+
+  }
+
+    .sidebarOpen {
+    right: 0; /* Visible when open */
+
+  }
+
+  .topHeaderContainer{
+    font-size: 2rem;
+  }
+}

@@ -44,6 +44,9 @@
   border-radius: 0.625rem;
 }
 
+
+
+
 .animatedLineGroup {
   display: flex;
   flex-direction: column;
@@ -396,5 +399,26 @@
   }
   .input {
     max-width: 300px;
+  }
+}
+
+
+/* tablet */
+@media (min-width: 480px) {
+  .contentBox {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;              /* let page expand */
+    padding: 1rem 2rem;
+    /* margin-top: 5vh; */
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .contentBox {
+    width: 100vw;
+    max-width: 1000px;
+
   }
 }

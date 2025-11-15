@@ -86,9 +86,11 @@
 
 .testimonialRating {
   display: flex;
+  align-self: center;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.8rem;
+  margin-left: -1.5rem;
 }
 
 .testimonialStars {
@@ -156,3 +158,22 @@
   }
 }
 
+
+/* ********************************************************************************************** */
+
+/* tablet */
+@media (min-width: 768px) {
+  .testimonialSwiper {
+    width: 75%;
+    max-width: 300px;
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .contentBox {
+    width: 100vw;
+    max-width: 1000px;
+
+  }
+}

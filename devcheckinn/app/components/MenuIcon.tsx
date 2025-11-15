@@ -19,7 +19,7 @@ const MenuIcon: React.FC = () => {
      " ",
      "Rooms",
      "About",
-     "Blog",
+    //  "Blog",
      "Restaurant", 
      "Bar", 
      " ",
@@ -56,9 +56,9 @@ const MenuIcon: React.FC = () => {
       case "About":
         router.push("/about"); // Navigate to the desired route
         break;
-      case "Blog":
-        router.push("blog");
-        break;
+      // case "Blog":
+      //   router.push("blog");
+      //   break;
       case "Restaurant":
         router.push("restaurant");
         break;
@@ -139,7 +139,7 @@ const MenuIcon: React.FC = () => {
 
                 <a href="https://www.instagram.com/checkinn.hotel/" target="_blank" rel="noopener noreferrer"><TbBrandInstagramFilled className={styles.instaIcon} /></a>
 
-                <a href="mhttps://t.me/checkinnhotelsngailto:support@checkinnhotelsng.com?subject=Booking%20Enquiry&body=Hi%20Check-Inn%2C%0AI'd%20love%20to%20make%20a%20reservation..." target="_blank" rel="noopener noreferrer"><BiLogoTelegram className={styles.telegramIcon} /></a>
+                <a href="https://t.me/checkinnhotelsngailto:support@checkinnhotelsng.com?subject=Booking%20Enquiry&body=Hi%20Check-Inn%2C%0AI'd%20love%20to%20make%20a%20reservation..." target="_blank" rel="noopener noreferrer"><BiLogoTelegram className={styles.telegramIcon} /></a>
 
                 <a href="mailto:support@checkinnhotelsng.com?subject=Booking%20Enquiry&body=Hi%20Check-Inn%2C%0AI'd%20love%20to%20make%20a%20reservation..." target="_blank" rel="noopener noreferrer"><MdAttachEmail /></a>
                 <span className={styles.themeProvider}><ThemeToggle/></span>

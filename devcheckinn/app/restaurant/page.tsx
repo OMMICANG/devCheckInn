@@ -4,7 +4,7 @@
 import React from "react";
 import Header from "@/app/components/Header";
 import Card from "@/app/components/Card";
-import styles from "./restaurant.module.css";
+import styles from "./Restaurant.module.css";
 
 export default function RoomsPage() {
   // Dummy data for preview
@@ -55,7 +55,7 @@ export default function RoomsPage() {
       ],
       features: "*** Per Portion",
 
-      price: 1200,
+      price: 1000,
     },
     {
       item: "Semo",
@@ -65,7 +65,7 @@ export default function RoomsPage() {
       ],
       features: "*** Per Portion",
 
-      price: 1200,
+      price: 1000,
     },
     {
       item: "Poundo",
@@ -112,7 +112,7 @@ export default function RoomsPage() {
       ],
       features: "*** Per Portion",
 
-      price: 1200,
+      price: 1500,
     },
 
         {
@@ -151,7 +151,7 @@ export default function RoomsPage() {
       ],
       features: "*** Per Portion",
 
-      price: 4000,
+      price: 3500,
     },
     {
       item: "Goat Meat",

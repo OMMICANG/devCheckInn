@@ -57,6 +57,7 @@ export default function HomePage() {
 
       <Header />
 
+
         <div className={styles.midSectionWrapper}>
 
           <div className={styles.animatedLineGroup}>

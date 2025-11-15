@@ -168,7 +168,9 @@
 .footerCopyrightBox {
     display: flex;
     position: absolute;
+    font-family: var(--font-body), serif;
     font-size: 0.625rem;
+    font-weight: 500;
     bottom: -12vh;
     flex-direction: column;
     align-items: center;
@@ -216,3 +218,23 @@
 .animateBreath {
   animation: breathFadeIn 1.5s ease-out forwards;
 }
+
+/* ********************************************************************************************** */
+
+/* tablet */
+@media (min-width: 540px) {
+.footerCopyrightBox{
+    width: 100vw;
+    max-width: 1000px;
+}
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .contentBox {
+    width: 100vw;
+    max-width: 1000px;
+
+  }
+}
+
