@@ -42,6 +42,8 @@ const AboutPage: React.FC = () => {
     animateText(document.querySelector(".animated-block5") as HTMLElement);
     animateText(document.querySelector(".animated-block6") as HTMLElement);
     animateText(document.querySelector(".animated-block7") as HTMLElement);
+    animateText(document.querySelector(".mission-statement") as HTMLElement);
+
 
   }, []);
 
@@ -56,7 +58,31 @@ const AboutPage: React.FC = () => {
 
         <div className={styles.aboutTextBox}>
           <div className={styles.aboutBoxWrapper}>
-            <div className={styles.mission}></div>
+            <div className={styles.mission}>
+
+              <div>
+
+              <h3
+                className={`mission-statement ${styles.recordText}`}
+                data-value="MISSION STATEMENT"
+              ></h3>
+
+            <span className={styles.animatedLineMission}></span>
+
+              </div>
+
+              <div className={styles.statementBody}>
+
+              <p className={styles.statementBody}>
+                Our mission is to provide exceptional, 
+                modern hospitality through clean and comfortable accommodations, 
+                warm and professional service, and reliable 24-hour guest support—all 
+                delivered by a disciplined, motivated team committed to safety, integrity, 
+                and excellence. We strive to create an environment where every guest feels 
+                valued and every employee feels proud to belong.
+              </p>
+              </div>
+            </div>
             <div className={styles.vision}></div>
           </div>
 

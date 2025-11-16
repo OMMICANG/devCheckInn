@@ -114,11 +114,37 @@
 }
 
 .mission {
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem 0.312rem;
     animation: dropIn 1.5s ease-out forwards;
     opacity: 0;
     transform: translateY(-2.5rem);
 }
 
+.animatedLineMission {
+  display: flex;
+  height: 1px;
+  width: 95%;
+  max-width: 95%;
+  margin-bottom: .312rem;
+  background: var(--color-text);
+  justify-content: center;
+  animation: slideIn 5s ease-out forwards;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.statementBody{
+  font-family: var(--font-accent), serif;
+  font-size: 0.55rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 0.75rem;
+  opacity: 0;
+  animation: dropIn 4s ease-out forwards;
+
+}
 .vision{
   opacity: 0;
   animation: fadeSlideUp 1s ease-out forwards;
