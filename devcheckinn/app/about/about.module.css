@@ -76,6 +76,68 @@
     text-transform: uppercase;
 }
 
+.aboutUsBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    /* margin-bottom: 40vh; */
+    padding: 2rem 0;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+    
+}
+
+.aboutUsBox>div {
+    height: 97%;
+    border: 1px solid var(--color-text);
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    box-shadow: 1px 1px 0.5px 0.5px var(--color-text);
+}
+
+.imageBox {
+display: flex;
+  position: relative;
+    width: 35%;
+    max-width: 35%;
+    background-image: url('/backgrounds/4.jpg');
+    background-size: cover;
+    animation: dropIn 1.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-2.5rem);
+}
+
+.aboutImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+
+
+}
+
+.infoBox {
+    width: 55%;
+    padding: 1rem;
+    text-align: left;
+    font-family: var(--font-body), serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.25rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+
 .aboutTextBox {
     display: flex;
     flex-direction: column;
@@ -84,7 +146,7 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
-    /* margin-bottom: 40vh; */
+    margin-top: 1.5rem;
     padding: 2rem 0;
     border: 1px solid var(--color-text);
     border-radius: 0.5rem;
@@ -120,14 +182,26 @@
     animation: dropIn 1.5s ease-out forwards;
     opacity: 0;
     transform: translateY(-2.5rem);
+  overflow: hidden;
+  overflow-y: scroll;
+
 }
+
+.recordTextMission{
+  font-family: var(--font-wildCard), serif;
+  font-size: 0.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1rem;
+}
+
 
 .animatedLineMission {
   display: flex;
   height: 1px;
   width: 95%;
   max-width: 95%;
-  margin-bottom: .312rem;
+  margin-bottom: .5rem;
   background: var(--color-text);
   justify-content: center;
   animation: slideIn 5s ease-out forwards;
@@ -137,27 +211,36 @@
 
 .statementBody{
   font-family: var(--font-accent), serif;
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--color-text);
-  line-height: 0.75rem;
+  line-height: 1rem;
   opacity: 0;
   animation: dropIn 4s ease-out forwards;
 
 }
+
 .vision{
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem 0.312rem;
   opacity: 0;
   animation: fadeSlideUp 1s ease-out forwards;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .coreValues {
-    width: 50%;
-    height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    /* width: 50%; */
+    /* height: 15vh; */
     margin: 0 auto;
-    padding: 0.312rem;
-    left: 0;
-    border: 1px solid var(--color-text);
-    border-radius: 0.5rem;
+    padding: 0.15rem;
+    /* left: 0; */
+    border: 1px outset var(--color-text);
+    border-radius: 50%;
     background: linear-gradient(to left, var(--color-secondary), var(--color-background));
     color: var(--color-background);
     font-family: var(--font-body), serif;
@@ -189,17 +272,49 @@
 }
 
 .culture {
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem 0.312rem;
+  align-items: left;
     animation: dropIn 1.5s ease-out forwards;
     animation-delay: 1.5s;
     opacity: 0;
     transform: translateY(-2.5rem);
+    overflow: hidden;
+  overflow-y: scroll;
+}
+
+.culture>div>h3{
+  text-align: left;
+}
+
+.statementBodyEthics{
+  text-align: left;
+  font-family: var(--font-heading), serif;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2rem;
+  opacity: 0;
+  animation: dropIn 8s ease-out forwards;
+
 }
 
 .ethics{
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem 0.312rem;
+  align-items: left;
   animation: fadeSlideUp 1s ease-out forwards;
   animation-delay: 1.5s;
   opacity: 0;
+  overflow: hidden;
+  overflow-y: scroll;
 
+}
+
+.ethics>div>h3{
+  text-align: left;
 }
 
 .trackRecordWrapperBox{

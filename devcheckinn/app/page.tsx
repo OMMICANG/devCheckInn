@@ -19,7 +19,7 @@ const backgroundImages = [
   '/backgrounds/1.webp',
   '/backgrounds/2.webp',
   '/backgrounds/3.webp',
-  '/backgrounds/4.webp',
+  '/backgrounds/4.jpg',
   '/backgrounds/5.webp',
   '/backgrounds/6.webp',
   '/backgrounds/7.webp',

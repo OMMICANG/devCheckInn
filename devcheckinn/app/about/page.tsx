@@ -4,6 +4,8 @@
 import React, { useEffect } from "react";
 import Header from "@/app/components/Header";
 import Counter from "../components/Counter";
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from "./about.module.css";
 
 const AboutPage: React.FC = () => {
@@ -43,6 +45,10 @@ const AboutPage: React.FC = () => {
     animateText(document.querySelector(".animated-block6") as HTMLElement);
     animateText(document.querySelector(".animated-block7") as HTMLElement);
     animateText(document.querySelector(".mission-statement") as HTMLElement);
+    animateText(document.querySelector(".vision-statement") as HTMLElement);
+    animateText(document.querySelector(".culture-statement") as HTMLElement);
+    animateText(document.querySelector(".ethics-statement") as HTMLElement);
+
 
 
   }, []);
@@ -56,6 +62,59 @@ const AboutPage: React.FC = () => {
           <span className="animated-text" data-value="Who We Are"></span>
         </h3>
 
+        <div className={styles.aboutUsBox}>
+          <div className={styles.imageBox}>
+              <Image priority={true} 
+                src="/backgrounds/4.jpg" 
+                alt="Check Inn Logo"
+                fill
+                sizes="(max-width: 35vw) 35vw, 35vw"
+                style={{ objectFit: 'cover' }} 
+                quality={100}
+                className={styles.aboutImage}
+                
+                />
+          </div>
+
+          <div className={styles.infoBox}>
+            Check-Inn 24/7 Hotels, Restaurant &  
+            Lounge is a premium lifestyle hospitality  
+            brand located in the heart of Ojodu-Berger,  
+            Lagos. Designed for comfort, convenience  
+            and class, we provide round-the-clock  
+            services that cater to today’s modern  
+            traveler, business executive, and leisure  
+            guest. 
+            Our brand was built on a simple belief — 
+            that hospitality should be seamless,  
+            accessible, and dependable at any hour.  
+            Whether you're checking in late at night,  
+            enjoying a freshly prepared meal, or  
+            unwinding with friends in our lounge, we  
+            ensure a consistently warm and refined  
+            experience. 
+            At Check-Inn 24/7, we combine elegance  
+            with efficiency. Our hotel offers well- 
+            appointed rooms, high-speed internet,  
+            responsive customer service and a secure  
+            environment. Our restaurant serves a  
+            diverse selection of local and continental  
+            dishes crafted by experienced chefs, while  
+            our lounge provides a relaxed yet vibrant  
+            atmosphere with premium drinks, music,  
+            and exceptional service. 
+            We are committed to hospitality  
+            excellence, operational integrity, and the  
+            comfort of every guest who walks through  
+            our doors. Through continuous  
+            improvement, staff training, and  
+            adherence to global hospitality standards,  
+            Check-Inn 24/7 stands as a trusted  
+            destination for rest, dining and  
+            entertainment. 
+            Welcome to a place where comfort meets convenience.          </div>
+        </div>
+
         <div className={styles.aboutTextBox}>
           <div className={styles.aboutBoxWrapper}>
             <div className={styles.mission}>
@@ -63,7 +122,7 @@ const AboutPage: React.FC = () => {
               <div>
 
               <h3
-                className={`mission-statement ${styles.recordText}`}
+                className={`mission-statement ${styles.recordTextMission}`}
                 data-value="MISSION STATEMENT"
               ></h3>
 
@@ -74,23 +133,98 @@ const AboutPage: React.FC = () => {
               <div className={styles.statementBody}>
 
               <p className={styles.statementBody}>
-                Our mission is to provide exceptional, 
-                modern hospitality through clean and comfortable accommodations, 
-                warm and professional service, and reliable 24-hour guest support—all 
-                delivered by a disciplined, motivated team committed to safety, integrity, 
-                and excellence. We strive to create an environment where every guest feels 
-                valued and every employee feels proud to belong.
+                Our mission is to deliver modern, reliable hospitality through 
+                clean comfort, warm service, and a committed team 
+                dedicated to safety, integrity, and excellence—ensuring 
+                every guest feels valued and every staff member proud.
               </p>
               </div>
             </div>
-            <div className={styles.vision}></div>
+            <div className={styles.vision}>
+
+              <div>
+
+                <h3
+                  className={`vision-statement ${styles.recordTextMission}`}
+                  data-value="VISION STATEMENT"
+                ></h3>
+
+                <span className={styles.animatedLineMission}></span>
+
+              </div>
+
+              <div className={styles.statementBody}>
+
+              <p className={styles.statementBody}>
+                To become the most trusted and preferred 24/7 hospitality 
+                destination in Lagos.<br/>
+                Check-Inn 24/7 offers comfort, safety, and exceptional guest 
+                experiences at every hour of the day. 
+              </p>
+              </div>
+            </div>
           </div>
 
-          <button className={styles.coreValues}></button>
+          <button className={styles.coreValues}>
+                <div className={styles.logoWrapper}>
+                    <Link href={"/"}>
+                    <Image priority={true} 
+                    src="/logo/Logo_-_Copy-removebg-preview.png" 
+                    alt="Check Inn Logo" width={75} height={75} 
+                    className={styles.logo} />
+                    </Link>
+                </div>
+          </button>
 
           <div className={styles.aboutBoxWrapper2}>
-            <div className={styles.culture}></div>
-            <div className={styles.ethics}></div>
+            <div className={styles.culture}>
+
+              <div>
+
+                <h3
+                  className={`culture-statement ${styles.recordTextMission}`}
+                  data-value= "CORE ETHICS"
+                ></h3>
+
+                <span className={styles.animatedLineMission}></span>
+
+              <div className={styles.statementBodyEthics}>
+
+                <ul>
+                  <li>INTEGRITY</li>
+                  <li>EXCELLENCE</li>
+                  <li>PROFESSIONALISM</li>
+                  <li>RESPECT</li>
+                  <li>CLEANLINESS</li>
+                </ul>
+              </div>
+
+              </div>
+            </div>
+            <div className={styles.ethics}>
+
+                            <div>
+
+                <h3
+                  className={`ethics-statement ${styles.recordTextMission}`}
+                  data-value= "CORE ETHICS"
+                ></h3>
+
+                <span className={styles.animatedLineMission}></span>
+
+              <div className={styles.statementBodyEthics}>
+
+                <ul>
+                  <li>RELIABILITY</li>
+                  <li>CUSTOMER-CENTRIC-SERVICE</li>
+                  <li>TEAMWORK</li>
+                  <li>INNOVATION</li>
+                  <li>CONFIDENTIALITY</li>
+                </ul>
+              </div>
+
+              </div>
+            </div>
           </div>
 
         </div>
